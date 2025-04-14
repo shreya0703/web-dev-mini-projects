@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="input-box">
+        <input type="password" placeholder="password" id="password">
+        <img src="images/hide.png" id="hide" >
+    </div>
+    <script>
+        let hideIcon = document.getElementById("hide");
+        let password = document.getElementById("password");
+
+
+        hideIcon.onclick = function(){
+            if(password.type === "password"){
+                password.type = "text";
+                hideIcon.src = "images/show.png";
+            }else{
+                password.type = "password";
+                hideIcon.src = "images/hide.png";
+            }
+
+        }
+    </script>
+</body>
+</html>
